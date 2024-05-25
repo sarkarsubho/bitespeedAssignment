@@ -25,7 +25,9 @@ const initialNodes = [
   },
 ];
 
-let id = 1;
+let id = localStorage.getItem("nodes")
+  ? localStorage.getItem("nodes").length
+  : 1;
 const getId = () => `${++id}`;
 
 const App = () => {
@@ -105,7 +107,7 @@ const App = () => {
     setShowError(!connected);
     console.log("connected", connected);
     if (connected) {
-      // can save the nodes and edges to the database 
+      // can save the nodes and edges to the database
     }
   };
 
